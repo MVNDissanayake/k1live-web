@@ -10,6 +10,6 @@ export default defineConfig({
     alias:{
       "@": path.resolve(__dirname,"./src"),
     },
-    base:"/k1live-web",
+    base:"/k1live-web/",
   },
 });
