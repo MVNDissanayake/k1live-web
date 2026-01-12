@@ -10,6 +10,7 @@ const navItems = [
   { name: "Contact", href: "#contact" },
 ];
 
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
