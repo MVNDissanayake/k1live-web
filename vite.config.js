@@ -5,10 +5,10 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/k1live-web",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      base: "/k1live-web",
     },
   },
 });

@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "WEDDINGS & EVENTS",
     description: "Creating magical memories with perfect live music for weddings and private celebrations..",
-    image: "/projects/project1.jpg",
+    image: "/projects/project1.png",
     tags: ["Celebrate", "Memories", "Unite"],
     demoUrl: "#",
   
@@ -15,7 +15,7 @@ const projects = [
     title: "TV BRODCASTING AND PROGRAMS ",
     description:
       "Featured live on top TV channels like ITN, TV Supreme, and SLBC, bringing our sound to homes nationwide.",
-    image: "/projects/project2.jpg",
+    image: "/projects/project2.png",
     tags: ["Live", "Broadcast", "Spotlight"],
     demoUrl: "#",
    
@@ -25,7 +25,7 @@ const projects = [
     title: "CONCERTS",
     description:
       "High-energy performances on Sri Lanka’s biggest stages, connecting with audiences everywhere.",
-    image: "/projects/project3.jpg",
+    image: "/projects/project3.png",
     tags: ["Energy", "Rhythm", "Cheers"],
     demoUrl: "#",
     
