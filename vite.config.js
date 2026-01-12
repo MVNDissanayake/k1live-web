@@ -5,9 +5,13 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  resolve: {
+  resolve: { base: "/k1live-web/",
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      
     },
+    base: "/k1live-web/",
   },
+  
 });
+
