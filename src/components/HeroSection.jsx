@@ -1,6 +1,17 @@
 import { ArrowDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const scrollToProjects = () => {
+    navigate("/"); // make sure we are on home page
+    setTimeout(() => {
+      const el = document.getElementById("projects");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
+
   return (
     <section
       id="hero"
@@ -21,16 +32,17 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            
             Sri Lanka’s premier live band delivering unforgettable 
             music for weddings, concerts, and elite events across Sri Lanka.
-
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button">
+            <button
+              onClick={scrollToProjects}
+              className="cosmic-button cursor-pointer"
+            >
               View My Work
-            </a>
+            </button>
           </div>
         </div>
       </div>

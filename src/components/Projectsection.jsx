@@ -1,34 +1,35 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import p1 from "@/assets/projects/project1.png";
+import p2 from "@/assets/projects/project2.png";
+import p3 from "@/assets/projects/project3.png";
+
 
 const projects = [
   {
     id: 1,
     title: "WEDDINGS & EVENTS",
     description: "Creating magical memories with perfect live music for weddings and private celebrations..",
-    image: "/projects/project1.png",
+    image: p1,
     tags: ["Celebrate", "Memories", "Unite"],
     demoUrl: "#",
-  
   },
   {
     id: 2,
-    title: "TV BRODCASTING AND PROGRAMS ",
+    title: "TV BRODCASTING AND PROGRAMS",
     description:
       "Featured live on top TV channels like ITN, TV Supreme, and SLBC, bringing our sound to homes nationwide.",
-    image: "/projects/project2.png",
+    image: p2,
     tags: ["Live", "Broadcast", "Spotlight"],
     demoUrl: "#",
-   
   },
   {
     id: 3,
     title: "CONCERTS",
     description:
       "High-energy performances on Sri Lanka’s biggest stages, connecting with audiences everywhere.",
-    image: "/projects/project3.png",
+    image: p3,
     tags: ["Energy", "Rhythm", "Cheers"],
     demoUrl: "#",
-    
   },
 ];
 
