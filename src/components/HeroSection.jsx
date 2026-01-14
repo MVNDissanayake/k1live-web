@@ -46,11 +46,13 @@ export const HeroSection = () => {
             Watch Live
           </button>
 
-
-
-          <button className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black rounded-full transition">
+          <button
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black rounded-full transition"
+          >
             Contact Us
           </button>
+
         </div>
       </div>
 
