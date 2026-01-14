@@ -1,5 +1,7 @@
 import { ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import heroImage from "../assets/hero.jpg"; // adjust path relative to your HeroSection file
+
 
 export const HeroSection = () => {
   const navigate = useNavigate();
@@ -13,44 +15,47 @@ export const HeroSection = () => {
   };
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4"
+    <section 
+    id="hero"
+    className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
     >
-      <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in"> K1 </span>
-            <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              {" "}
-              Live
-            </span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-              {" "}
-              - The Sound That Brings Every Event to Life
-            </span>
-          </h1>
+      {/* Background Image */}
+      <img
+        src={heroImage}
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Sri Lanka’s premier live band delivering unforgettable 
-            music for weddings, concerts, and elite events across Sri Lanka.
-          </p>
+      {/* Optional dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <button
-              onClick={scrollToProjects}
-              className="cosmic-button cursor-pointer"
-            >
-              View My Work
-            </button>
-          </div>
+      {/* Bottom Tagline + Buttons */}
+      <div className="absolute bottom-55 left-1/2 -translate-x-1/2 z-20 text-center w-full px-4">
+        <p className="text-white text-lg md:text-xl mb-4 opacity-80">
+          Bringing live music experiences to life
+        </p>
+
+        <div className="flex gap-4 justify-center">
+
+          <button
+            onClick={() =>
+            document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition"
+          >
+            Watch Live
+          </button>
+
+
+
+          <button className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black rounded-full transition">
+            Contact Us
+          </button>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-        <ArrowDown className="h-5 w-5 text-primary" />
-      </div>
+
+
     </section>
   );
 };

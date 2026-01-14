@@ -34,34 +34,43 @@ export const Navbar = () => {
   };
 
   return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
+<nav
+  className={cn(
+    "fixed w-full z-40 transition-all duration-300",
+    isScrolled
+      ? "py-3 bg-black/40 backdrop-blur-xl shadow-lg"
+      : "py-5 bg-black/10 backdrop-blur-md"
+  )}
+>
+
+
       <div className="container flex items-center justify-between">
         <button
           onClick={() => goToSection(item.hash)}
           className="text-xl font-bold text-primary flex items-center cursor-pointer"
         >
+          
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> K1 </span> Live
-          </span>
+           <span className="text-white font-bold">k1</span>
+            <span className="ml-1 text-purple-500 font-bold">Live</span>
+            </span>
+
+
+
         </button>
 
         {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
-<button
-  onClick={() => goToSection(item.hash)}
-  className="text-foreground/80 hover:text-primary transition-colors duration-300 cursor-pointer"
->
-  {item.name}
-</button>
-
-          ))}
-        </div>
+          <div className="hidden md:flex space-x-8">
+  {navItems.map((item, key) => (
+    <button
+      key={key}
+      onClick={() => goToSection(item.hash)}
+      className="text-white hover:text-white/80 transition-colors duration-300"
+    >
+      {item.name}
+    </button>
+  ))}
+</div>
 
         {/* mobile menu button */}
         <button
@@ -72,13 +81,13 @@ export const Navbar = () => {
         </button>
 
         {/* mobile nav */}
-<div
-  className={cn(
-    "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden cursor-auto",
-    isMenuOpen
-      ? "opacity-100 pointer-events-auto"
-      : "opacity-0 pointer-events-none"
-  )}
+      <div
+        className={cn(
+          "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden cursor-auto",
+        isMenuOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+         )}
 >
 
           <div className="flex flex-col space-y-8 text-xl">
